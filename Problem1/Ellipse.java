@@ -1,39 +1,50 @@
 package Problem1;
 
-class Circle extends Shape {
-    private double radius;
+class Ellipse extends Shape {
+    private double majorAxis;
+    private double minorAxis;
 
     // Constructor
-    public Circle(double radius) {
-        this.radius = radius;
+    public Ellipse(double majorAxis, double minorAxis) {
+        this.majorAxis = majorAxis;
+        this.minorAxis = minorAxis;
     }
+
 
     // Getters and Setters
-    public double getRadius() {
-        return this.radius;
+    public double getMajorAxis() {
+        return this.majorAxis;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
+    public void setMajorAxis(double majorAxis) {
+        this.majorAxis = majorAxis;
+    }
+
+    public double getMinorAxis() {
+        return this.minorAxis;
+    }
+
+    public void setMinorAxis(double minorAxis) {
+        this.minorAxis = minorAxis;
     }
 
     // Calculations
 
-    // Area of a circle
+    // Area of an ellipse
     @Override
     public double area() {
-        return Math.PI * radius * radius;
+        return Math.PI * majorAxis * minorAxis;
     }
 
-    // Perimeter of a circle
+    // Perimeter of an ellipse
     @Override
     public double perimeter() {
-        return 2 * Math.PI * radius;
+        // Approximation
+        return 2 * Math.PI * Math.sqrt((majorAxis * majorAxis + minorAxis * minorAxis) / 2);
     }
 
-    // String representation of a circle
     @Override
     public String toString() {
-        return "Circle with radius: " + radius;
+        return "Ellipse with major axis: " + majorAxis + " and minor axis: " + minorAxis;
     }
 }
