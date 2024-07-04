@@ -2,24 +2,26 @@ package Problem4;
 
 import java.util.Scanner;
 
+
+//The ParseInts class reads a line of text and calculates the sum of all the integers in the line.
 public class ParseInts {
     public static void main(String[] args) {
-        int sum = 0;
+        int val, sum = 0;
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter a line of text");
-        String line = scan.nextLine();
+        Scanner scanLine = new Scanner(scan.nextLine());
 
-        // Use a second Scanner to parse integers from the line of text
-        Scanner lineScanner = new Scanner(line);
-        while (lineScanner.hasNext()) {
-            String token = lineScanner.next();
-            // Parse each token as an integer and add to sum
-            int number = Integer.parseInt(token); // This line will throw NumberFormatException for non-integers
-            sum += number;
+        while (scanLine.hasNext()) {
+            try {
+                val = Integer.parseInt(scanLine.next());
+                sum += val;
+            } catch (NumberFormatException e) {
+                // Empty catch block to ignore non-integer values
+            }
         }
-        lineScanner.close();
-        
+        scanLine.close();
+
         System.out.println("The sum of the integers on this line is " + sum);
     }
 }
