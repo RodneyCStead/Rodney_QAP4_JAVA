@@ -54,6 +54,10 @@ public class Demo {
 
         // Testing setters and getters
         System.out.println("Setting and getting new values for the triangle.");
+        triangle.setBase(4);
+        System.out.println("New base: " + triangle.getBase());
+        triangle.setHeight(5);
+        System.out.println("New height: " + triangle.getHeight());
         triangle.setSide1(6);
         System.out.println("New side 1: " + triangle.getSide1());
         triangle.setSide2(8);
@@ -64,7 +68,26 @@ public class Demo {
         System.out.println("Perimeter of the new triangle: " + triangle.perimeter());
 
         // Create an instance of the EquilateralTriangle class
+        EquilateralTriangle equilateralTriangle = new EquilateralTriangle(5);
+        
+        System.out.println("");
+        System.out.println("Testing EquilateralTriangle class:");
+        System.out.println(equilateralTriangle);
 
+        // Print the area of the equilateral triangle and permiter of the equilateral triangle
+        System.out.println("Area of the equilateral triangle: " + equilateralTriangle.area());
+        System.out.println("Perimeter of the equilateral triangle: " + equilateralTriangle.perimeter());
+
+        // Testing setters and getters
+        System.out.println("Setting and getting new values for the equilateral triangle.");
+        equilateralTriangle.setSide(10);
+        System.out.println("New side: " + equilateralTriangle.getSide());
+        System.out.println("Area of the new equilateral triangle: " + equilateralTriangle.area());
+        System.out.println("Perimeter of the new equilateral triangle: " + equilateralTriangle.perimeter());
+
+        System.out.println("");
+        System.out.println("End of testing.");
+        System.out.println("");
 
 
 

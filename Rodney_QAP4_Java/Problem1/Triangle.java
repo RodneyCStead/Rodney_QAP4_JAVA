@@ -74,6 +74,6 @@ class Triangle extends Shape {
     // String mehtod for triangle
     @Override
     public String toString() {
-        return "Triangle with sides: " + side1 + ", " + side2 + ", " + side3;
+        return "Triangle with sides: " + side1 + ", " + side2 + ", " + side3 + " and base: " + base + " and height: " + height;
     }
 }
