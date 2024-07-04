@@ -1,7 +1,7 @@
 package Problem1;
 
-
-abstract public  class Shape {
+// 
+abstract class Shape {
     // Define abstract methods that all shapes must implement for area and perimeter
     public abstract double area();
     public abstract double perimeter();
