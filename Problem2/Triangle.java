@@ -77,7 +77,7 @@ class Triangle extends Shape {
         return "Triangle with sides: " + side1 + ", " + side2 + ", " + side3 + " and base: " + base + " and height: " + height;
     }
 
-    @Override
+    // Scaling method
     public void scale(double scaleFactor) {
         this.base *= scaleFactor;
         this.height *= scaleFactor;

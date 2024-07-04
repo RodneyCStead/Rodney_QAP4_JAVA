@@ -20,11 +20,13 @@ class EquilateralTriangle extends Triangle {
         setSide3(side);
     }
 
+    // String method
     @Override
     public String toString() {
         return "EquilateralTriangle with side: " + getBase();
     }
 
+    // Scaling method
     @Override
     public void scale(double scaleFactor) {
         setSide(getBase() * scaleFactor);

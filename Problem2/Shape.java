@@ -1,10 +1,12 @@
 package Problem2;
 
-
-abstract public class Shape implements Scalable {
+// Super class shape
+abstract public  class Shape {
+    
     public abstract double area();
     public abstract double perimeter();
-   
+
+    // to string method
     @Override
     public abstract String toString();
 }

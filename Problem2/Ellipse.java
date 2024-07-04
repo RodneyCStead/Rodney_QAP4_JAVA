@@ -28,6 +28,7 @@ class Ellipse extends Shape {
         this.minorAxis = minorAxis;
     }
 
+   
     // Calculations
 
     // Area of an ellipse
@@ -48,7 +49,7 @@ class Ellipse extends Shape {
         return "Ellipse with major axis: " + majorAxis + " and minor axis: " + minorAxis;
     }
 
-    @Override
+    // Scaleing method
     public void scale(double scaleFactor) {
         this.majorAxis *= scaleFactor;
         this.minorAxis *= scaleFactor;
