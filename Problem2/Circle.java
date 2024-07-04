@@ -17,6 +17,7 @@ class Circle extends Shape {
         this.radius = radius;
     }
 
+
     // Calculations
 
     // Area of a circle
@@ -37,7 +38,7 @@ class Circle extends Shape {
         return "Circle with radius: " + radius;
     }
 
-    @Override
+    // Scaleing method
     public void scale(double scaleFactor) {
         this.radius *= scaleFactor;
     }
